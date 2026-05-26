@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!-- saved from url=(0161)x05.html#u1 -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2025 교육과정 고등학교 정보 5단원 디지털 문화 통합 평가</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif;background:#f4f7fb;color:#1f2937;line-height:1.7}
+header{background:linear-gradient(135deg,#111827,#0f766e);color:white;padding:30px 36px}
+header h1{margin:0;font-size:30px} header p{margin:8px 0 0;opacity:.95}
+.layout{display:grid;grid-template-columns:285px 1fr;min-height:100vh}
+nav{background:#111827;color:white;padding:18px;position:sticky;top:0;height:100vh;overflow:auto}
+nav h2{font-size:18px;margin:0 0 12px}
+nav a{display:block;color:#d1fae5;text-decoration:none;padding:10px 12px;border-radius:12px;margin:7px 0;background:rgba(255,255,255,.07);font-weight:700;font-size:14px}
+nav a:hover{background:rgba(255,255,255,.16)}
+main{padding:26px 34px 80px;max-width:1250px}
+section{background:white;border-radius:18px;padding:26px;margin-bottom:24px;box-shadow:0 8px 24px rgba(15,23,42,.08);border:1px solid #e5e7eb}
+.unit h2{color:var(--unit);border-left:8px solid var(--unit);padding-left:12px;margin-top:0}
+h2{color:#065f46;margin-top:0} h3{color:#334155;margin-top:24px}
+.standard{background:#f8fafc;border:1px solid #cbd5e1;border-radius:14px;padding:16px}
+pre{background:#0f172a;color:#e5e7eb;padding:18px;border-radius:14px;overflow:auto;font-size:14px;line-height:1.55}
+code{font-family:Consolas,'Courier New',monospace}
+.explain{background:#f8fafc;border-left:6px solid var(--unit,#0f766e);padding:14px;border-radius:10px}
+.question{border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin:14px 0;background:#fcfcfd}
+.qtitle{font-weight:800;margin-bottom:10px;color:#111827}
+label{display:block;padding:9px 12px;border:1px solid #d1d5db;border-radius:10px;margin:7px 0;cursor:pointer;background:#fff}
+label:hover{background:#ecfdf5}
+input[type=text],textarea{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:10px;font-family:inherit;font-size:15px}
+textarea{min-height:100px}
+button{border:none;background:#0f766e;color:white;padding:13px 20px;border-radius:12px;cursor:pointer;font-weight:800;font-size:15px;margin:6px 6px 6px 0}
+button:hover{background:#115e59} .gray{background:#475569} .gray:hover{background:#334155}
+.result{white-space:pre-wrap;background:#ecfeff;border:1px solid #67e8f9;border-radius:14px;padding:18px;margin-top:16px;display:none}
+.scorebox{background:#f1f5f9;border:1px solid #cbd5e1;border-radius:14px;padding:18px}
+.solution{background:#fffbeb;border:1px solid #fde68a;border-radius:14px;padding:12px;margin-top:14px}
+summary{font-weight:900;cursor:pointer;color:#92400e}
+#topSummary{background:#ecfdf5;border-left:6px solid #0f766e;padding:16px;border-radius:12px}
+@media(max-width:850px){.layout{grid-template-columns:1fr}nav{position:relative;height:auto}main{padding:16px}}
+</style>
+</head>
+<body>
+<header>
+<h1>2025 교육과정 고등학교 정보 5단원 디지털 문화 통합 평가</h1>
+<p>[12정05-01] 디지털 기술과 진로 · [12정05-02] 정보 보호와 공유 · [12정05-03] 정보보안과 디지털 윤리</p>
+</header>
+<div class="layout">
+<nav>
+<h2>5단원 목차</h2>
+<a href="x05.html#intro">응시 정보 / 채점</a>
+<a href="x05.html#u1">12정05-01<br>디지털 기술과 진로 설계</a><a href="x05.html#u2">12정05-02<br>정보 보호와 정보 공유</a><a href="x05.html#u3">12정05-03<br>정보보안과 디지털 윤리</a>
+</nav>
+<main>
+<section id="intro">
+<h2>응시 정보 및 통합 채점</h2>
+<div id="topSummary">
+5단원 디지털 문화 성취기준 [12정05-01]~[12정05-03]을 모두 포함한 통합 평가입니다.
+각 성취기준마다 OX 5문항, 5지선다형 2문항, 서술형 1문항을 포함합니다.
+각 성취기준은 100점, 전체는 300점 만점입니다.
+</div>
+<div class="scorebox">
+<p><b>학번</b></p><input type="text" id="studentId" placeholder="예: 1100">
+<p><b>이름</b></p><input type="text" id="studentName" placeholder="예: 인수샘">
+<br><br>
+<button onclick="gradeAll()">전체 채점 및 TXT 저장</button>
+<button class="gray" onclick="showAllSolutions()">전체 상세 해설 펼치기</button>
+<button class="gray" onclick="hideAllSolutions()">전체 상세 해설 접기</button>
+</div>
+<div id="result" class="result"></div>
+</section>
+
+<section id="u1" class="unit" style="--unit:#2563eb">
+  <h2>12정05-01 디지털 기술과 진로 설계</h2>
+  <div class="standard"><b>성취기준</b><br>디지털 기술이 사회에 미치는 영향력을 분석하고 발전 방향을 예측하여 진로를 설계한다.<br><br>디지털 사회가 진로에 미치는 다양한 영향력을 설명하고, 디지털 기술의 발전에 따른 사회 변화와 연계한 진로를 구체적으로 설계하여 미래 사회의 발전 방향에 대해 예측하고 통찰하려는 자세를 내면화할 수 있다.</div>
+  <h3>핵심 개념</h3>
+  <ul><li>디지털 기술은 직업의 형태, 업무 방식, 필요한 역량을 변화시킨다.</li><li>인공지능, 빅데이터, 클라우드, 사물인터넷 등은 미래 진로 설계와 밀접하게 연결된다.</li><li>진로 설계에서는 관심 분야, 필요한 디지털 역량, 사회 변화 전망을 함께 고려해야 한다.</li><li>디지털 기술 발전은 기존 직업을 변화시키고 새로운 직업을 만들어낸다.</li></ul>
+  <h3>예제 파이썬 코드</h3>
+  <pre><code># 디지털 기술과 관련된 진로 추천 예제
+career_data = {
+    "AI": "인공지능 개발자",
+    "DATA": "데이터 분석가",
+    "SECURITY": "정보보안 전문가",
+    "DESIGN": "UX/UI 디자이너"
+}
+
+interest = "DATA"
+
+if interest in career_data:
+    career = career_data[interest]
+else:
+    career = "추가 탐색 필요"
+
+print("관심 분야:", interest)
+print("추천 진로:", career)</code></pre>
+  <h3>예상 출력</h3>
+  <pre><code>관심 분야: DATA
+추천 진로: 데이터 분석가</code></pre>
+  <h3>상세 설명</h3>
+  <div class="explain">이 예제는 <b>디지털 기술과 진로 설계</b>와 관련된 현실 문제를 간단한 자료 구조와 조건문으로 표현합니다. 학생은 코드의 입력, 처리 과정, 출력 결과를 분석하며 디지털 문화의 핵심 역량을 학습할 수 있습니다.</div>
+  <h3>OX 퀴즈 5문항</h3>
+  
+        <div class="question">
+          <div class="qtitle">OX 1. 디지털 기술은 직업 세계와 진로 설계에 영향을 줄 수 있다.</div>
+          <label><input type="radio" name="u1_ox1" value="O"> O</label>
+          <label><input type="radio" name="u1_ox1" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 2. 디지털 사회에서는 새로운 직업이 생기고 기존 직업도 변화할 수 있다.</div>
+          <label><input type="radio" name="u1_ox2" value="O"> O</label>
+          <label><input type="radio" name="u1_ox2" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 3. 진로 설계에서는 사회 변화와 디지털 역량을 고려할 필요가 없다.</div>
+          <label><input type="radio" name="u1_ox3" value="O"> O</label>
+          <label><input type="radio" name="u1_ox3" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 4. 데이터 분석가, 정보보안 전문가 등은 디지털 기술과 관련된 진로가 될 수 있다.</div>
+          <label><input type="radio" name="u1_ox4" value="O"> O</label>
+          <label><input type="radio" name="u1_ox4" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 5. 디지털 기술의 발전 방향을 예측하는 태도는 미래 사회를 준비하는 데 도움이 된다.</div>
+          <label><input type="radio" name="u1_ox5" value="O"> O</label>
+          <label><input type="radio" name="u1_ox5" value="X"> X</label>
+        </div>
+  <h3>5지선다형 2문항</h3>
+  
+        <div class="question">
+          <div class="qtitle">5지선다형 1. 디지털 기술 발전과 관련된 진로로 가장 적절한 것은?</div>
+          <label><input type="radio" name="u1_mc1" value="1"> 1. 데이터 분석가</label><label><input type="radio" name="u1_mc1" value="2"> 2. 연필 깎기 전담자</label><label><input type="radio" name="u1_mc1" value="3"> 3. 전기 없는 계산원</label><label><input type="radio" name="u1_mc1" value="4"> 4. 종이만 분류하는 직업</label><label><input type="radio" name="u1_mc1" value="5"> 5. 컴퓨터 사용 금지 관리자</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">5지선다형 2. 디지털 사회에서 진로를 설계할 때 가장 적절한 태도는?</div>
+          <label><input type="radio" name="u1_mc2" value="1"> 1. 기술 변화는 무시한다.</label><label><input type="radio" name="u1_mc2" value="2"> 2. 현재 유행만 보고 결정한다.</label><label><input type="radio" name="u1_mc2" value="3"> 3. 관심 분야와 필요한 디지털 역량, 사회 변화를 함께 고려한다.</label><label><input type="radio" name="u1_mc2" value="4"> 4. 직업 정보는 전혀 찾아보지 않는다.</label><label><input type="radio" name="u1_mc2" value="5"> 5. 디지털 기술은 모든 직업과 무관하다고 본다.</label>
+        </div>
+  <h3>서술형 문항</h3>
+  <div class="question">
+    <div class="qtitle">예제 코드를 보고 빈칸 ①, 빈칸 ②를 채우고 출력 결과를 서술하시오.</div>
+    <pre><code>career_data = {
+    "AI": "인공지능 개발자",
+    "DATA": "데이터 분석가",
+    "SECURITY": "정보보안 전문가"
+}
+
+interest = "SECURITY"
+
+career = career_data[____①____]
+
+print("관심 분야:", interest)
+print("추천 진로:", ____②____)</code></pre>
+    <p>빈칸 ①</p><input type="text" id="u1_b1">
+    <p>빈칸 ②</p><input type="text" id="u1_b2">
+    <p>출력 결과 서술</p><textarea id="u1_out"></textarea>
+  </div>
+  <details class="solution"><summary>12정05-01 상세 해설 보기</summary><div id="u1_solution"><p><b>OX 1 정답: O</b> — 디지털 기술은 직무 내용, 업무 방식, 필요 역량을 변화시킨다.</p><p><b>OX 2 정답: O</b> — 기술 발전은 직업 구조를 변화시킨다.</p><p><b>OX 3 정답: X</b> — 미래 진로 설계에서는 기술 변화와 필요한 역량을 함께 고려해야 한다.</p><p><b>OX 4 정답: O</b> — 데이터와 보안은 디지털 사회의 핵심 분야이다.</p><p><b>OX 5 정답: O</b> — 기술 변화 예측은 진로 선택과 역량 준비에 도움이 된다.</p><p><b>5지선다형 1 정답: 1</b> — 데이터 분석가는 디지털 기술과 밀접한 진로이다.</p><p><b>5지선다형 2 정답: 3</b> — 진로 설계는 개인 관심, 역량, 사회 변화 분석을 함께 고려해야 한다.</p><p><b>서술형 정답</b><br>빈칸 ①: <code>interest</code><br>빈칸 ②: <code>career</code></p><pre><code>관심 분야: SECURITY
+추천 진로: 정보보안 전문가</code></pre><p>interest 값은 'SECURITY'이고 career_data['SECURITY']의 값은 '정보보안 전문가'이므로 추천 진로는 정보보안 전문가가 된다.</p></div></details>
+</section>
+
+<section id="u2" class="unit" style="--unit:#059669">
+  <h2>12정05-02 정보 보호와 정보 공유</h2>
+  <div class="standard"><b>성취기준</b><br>보호해야 할 정보와 공유해야 할 정보를 구분하고, 올바른 정보 보호 방법을 실천한다.<br><br>정보 보호와 정보 공유에 대해 명확히 설명하고, 개인정보 보호, 오ㆍ남용 방지 대책 등 다양한 실사례 탐색을 통한 정보 보호 방법을 실천하여 올바른 정보 보호 의식을 내면화할 수 있다.</div>
+  <h3>핵심 개념</h3>
+  <ul><li>개인정보, 비밀번호, 주민등록번호, 위치 정보 등은 보호해야 할 정보이다.</li><li>공익적 자료, 출처가 명확한 공개 자료, 저작권을 지킨 자료는 조건에 맞게 공유할 수 있다.</li><li>정보 공유 시에는 개인정보 노출, 저작권 침해, 허위 정보 확산을 주의해야 한다.</li><li>정보 보호 실천에는 비밀번호 관리, 접근 권한 설정, 익명화, 출처 표시가 포함된다.</li></ul>
+  <h3>예제 파이썬 코드</h3>
+  <pre><code># 공유 가능한 정보와 보호해야 할 정보 구분 예제
+info_list = [
+    {"name": "학교 급식 메뉴", "type": "공유 가능"},
+    {"name": "학생 전화번호", "type": "보호 필요"},
+    {"name": "공개 기상 데이터", "type": "공유 가능"},
+    {"name": "계정 비밀번호", "type": "보호 필요"}
+]
+
+protected = []
+shared = []
+
+for info in info_list:
+    if info["type"] == "보호 필요":
+        protected.append(info["name"])
+    else:
+        shared.append(info["name"])
+
+print("보호해야 할 정보:", protected)
+print("공유 가능한 정보:", shared)</code></pre>
+  <h3>예상 출력</h3>
+  <pre><code>보호해야 할 정보: ['학생 전화번호', '계정 비밀번호']
+공유 가능한 정보: ['학교 급식 메뉴', '공개 기상 데이터']</code></pre>
+  <h3>상세 설명</h3>
+  <div class="explain">이 예제는 <b>정보 보호와 정보 공유</b>와 관련된 현실 문제를 간단한 자료 구조와 조건문으로 표현합니다. 학생은 코드의 입력, 처리 과정, 출력 결과를 분석하며 디지털 문화의 핵심 역량을 학습할 수 있습니다.</div>
+  <h3>OX 퀴즈 5문항</h3>
+  
+        <div class="question">
+          <div class="qtitle">OX 1. 개인 전화번호와 비밀번호는 보호해야 할 정보이다.</div>
+          <label><input type="radio" name="u2_ox1" value="O"> O</label>
+          <label><input type="radio" name="u2_ox1" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 2. 공유 가능한 정보라도 출처와 저작권을 확인해야 한다.</div>
+          <label><input type="radio" name="u2_ox2" value="O"> O</label>
+          <label><input type="radio" name="u2_ox2" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 3. 친구의 개인정보는 동의 없이 인터넷에 올려도 된다.</div>
+          <label><input type="radio" name="u2_ox3" value="O"> O</label>
+          <label><input type="radio" name="u2_ox3" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 4. 개인정보 보호를 위해 필요한 경우 데이터를 익명화할 수 있다.</div>
+          <label><input type="radio" name="u2_ox4" value="O"> O</label>
+          <label><input type="radio" name="u2_ox4" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 5. 정보 보호는 정보 공유와 전혀 관련이 없다.</div>
+          <label><input type="radio" name="u2_ox5" value="O"> O</label>
+          <label><input type="radio" name="u2_ox5" value="X"> X</label>
+        </div>
+  <h3>5지선다형 2문항</h3>
+  
+        <div class="question">
+          <div class="qtitle">5지선다형 1. 다음 중 보호해야 할 정보로 가장 적절한 것은?</div>
+          <label><input type="radio" name="u2_mc1" value="1"> 1. 공개된 날씨 정보</label><label><input type="radio" name="u2_mc1" value="2"> 2. 개인 계정 비밀번호</label><label><input type="radio" name="u2_mc1" value="3"> 3. 학교 홈페이지 공지</label><label><input type="radio" name="u2_mc1" value="4"> 4. 공개 교통 통계</label><label><input type="radio" name="u2_mc1" value="5"> 5. 저작권이 허용된 이미지</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">5지선다형 2. 올바른 정보 공유 방법으로 가장 적절한 것은?</div>
+          <label><input type="radio" name="u2_mc2" value="1"> 1. 출처 없이 복사해 배포한다.</label><label><input type="radio" name="u2_mc2" value="2"> 2. 친구의 전화번호를 동의 없이 올린다.</label><label><input type="radio" name="u2_mc2" value="3"> 3. 저작권과 개인정보를 확인한 뒤 필요한 범위에서 공유한다.</label><label><input type="radio" name="u2_mc2" value="4"> 4. 비밀번호를 단체 채팅방에 올린다.</label><label><input type="radio" name="u2_mc2" value="5"> 5. 확인되지 않은 소문을 빠르게 퍼뜨린다.</label>
+        </div>
+  <h3>서술형 문항</h3>
+  <div class="question">
+    <div class="qtitle">예제 코드를 보고 빈칸 ①, 빈칸 ②를 채우고 출력 결과를 서술하시오.</div>
+    <pre><code>info_list = [
+    {"name": "학생 주소", "type": "보호 필요"},
+    {"name": "공개 날씨 데이터", "type": "공유 가능"}
+]
+
+protected = []
+shared = []
+
+for info in info_list:
+    if info["type"] == "보호 필요":
+        protected.append(____①____)
+    else:
+        shared.append(info["name"])
+
+print("보호:", protected)
+print("공유:", ____②____)</code></pre>
+    <p>빈칸 ①</p><input type="text" id="u2_b1">
+    <p>빈칸 ②</p><input type="text" id="u2_b2">
+    <p>출력 결과 서술</p><textarea id="u2_out"></textarea>
+  </div>
+  <details class="solution"><summary>12정05-02 상세 해설 보기</summary><div id="u2_solution"><p><b>OX 1 정답: O</b> — 개인정보와 인증 정보는 외부에 노출되면 피해가 발생할 수 있다.</p><p><b>OX 2 정답: O</b> — 공유 시에는 출처, 저작권, 이용 조건을 확인해야 한다.</p><p><b>OX 3 정답: X</b> — 타인의 개인정보는 동의 없이 공유하면 안 된다.</p><p><b>OX 4 정답: O</b> — 익명화는 개인을 식별할 수 없도록 정보를 처리하는 방법이다.</p><p><b>OX 5 정답: X</b> — 올바른 공유를 위해서는 보호해야 할 정보와 공유 가능한 정보를 구분해야 한다.</p><p><b>5지선다형 1 정답: 2</b> — 비밀번호는 개인 인증 정보이므로 반드시 보호해야 한다.</p><p><b>5지선다형 2 정답: 3</b> — 정보 공유 전 개인정보와 저작권, 출처를 확인해야 한다.</p><p><b>서술형 정답</b><br>빈칸 ①: <code>info["name"]</code><br>빈칸 ②: <code>shared</code></p><pre><code>보호: ['학생 주소']
+공유: ['공개 날씨 데이터']</code></pre><p>학생 주소는 개인정보이므로 protected에 들어가고, 공개 날씨 데이터는 공유 가능한 정보이므로 shared에 들어간다.</p></div></details>
+</section>
+
+<section id="u3" class="unit" style="--unit:#dc2626">
+  <h2>12정05-03 정보보안과 디지털 윤리</h2>
+  <div class="standard"><b>성취기준</b><br>정보보안의 필요성을 이해하고, 보안 기술을 활용하여 디지털 윤리를 실천한다.<br><br>정보보안의 개념과 필요성을 명확하게 설명하고 개인 암호 설정 및 변경, 기기 및 클라우드 접근 제어, 바이러스 백신 설정 등 상황에 따른 보안 기술을 적절히 활용하여 디지털 윤리를 실천하며 올바른 보안 의식을 내면화할 수 있다.</div>
+  <h3>핵심 개념</h3>
+  <ul><li>정보보안은 정보의 기밀성, 무결성, 가용성을 지키는 활동이다.</li><li>강한 비밀번호, 2단계 인증, 접근 권한 설정은 계정 보호에 도움이 된다.</li><li>백신 설정, 업데이트, 의심스러운 링크 주의는 악성코드 피해를 줄이는 방법이다.</li><li>디지털 윤리는 타인의 정보와 권리를 존중하고 책임 있게 디지털 기술을 사용하는 태도이다.</li></ul>
+  <h3>예제 파이썬 코드</h3>
+  <pre><code># 비밀번호 강도 검사 예제
+password = "Info2025!"
+
+has_length = len(password) &gt;= 8
+has_digit = any(ch.isdigit() for ch in password)
+has_symbol = any(not ch.isalnum() for ch in password)
+
+if has_length and has_digit and has_symbol:
+    result = "강한 비밀번호"
+else:
+    result = "개선 필요"
+
+print("비밀번호 길이 조건:", has_length)
+print("숫자 포함:", has_digit)
+print("특수문자 포함:", has_symbol)
+print("판정:", result)</code></pre>
+  <h3>예상 출력</h3>
+  <pre><code>비밀번호 길이 조건: True
+숫자 포함: True
+특수문자 포함: True
+판정: 강한 비밀번호</code></pre>
+  <h3>상세 설명</h3>
+  <div class="explain">이 예제는 <b>정보보안과 디지털 윤리</b>와 관련된 현실 문제를 간단한 자료 구조와 조건문으로 표현합니다. 학생은 코드의 입력, 처리 과정, 출력 결과를 분석하며 디지털 문화의 핵심 역량을 학습할 수 있습니다.</div>
+  <h3>OX 퀴즈 5문항</h3>
+  
+        <div class="question">
+          <div class="qtitle">OX 1. 정보보안은 개인정보와 중요한 데이터를 보호하는 데 필요하다.</div>
+          <label><input type="radio" name="u3_ox1" value="O"> O</label>
+          <label><input type="radio" name="u3_ox1" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 2. 비밀번호는 짧고 단순할수록 안전하다.</div>
+          <label><input type="radio" name="u3_ox2" value="O"> O</label>
+          <label><input type="radio" name="u3_ox2" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 3. 2단계 인증은 계정 보안을 강화하는 방법이 될 수 있다.</div>
+          <label><input type="radio" name="u3_ox3" value="O"> O</label>
+          <label><input type="radio" name="u3_ox3" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 4. 의심스러운 링크를 함부로 클릭하지 않는 것은 보안 실천이다.</div>
+          <label><input type="radio" name="u3_ox4" value="O"> O</label>
+          <label><input type="radio" name="u3_ox4" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 5. 디지털 윤리는 온라인에서 타인의 권리와 정보를 존중하는 태도와 관련이 없다.</div>
+          <label><input type="radio" name="u3_ox5" value="O"> O</label>
+          <label><input type="radio" name="u3_ox5" value="X"> X</label>
+        </div>
+  <h3>5지선다형 2문항</h3>
+  
+        <div class="question">
+          <div class="qtitle">5지선다형 1. 강한 비밀번호의 조건으로 가장 적절한 것은?</div>
+          <label><input type="radio" name="u3_mc1" value="1"> 1. 1234처럼 짧고 쉬운 비밀번호</label><label><input type="radio" name="u3_mc1" value="2"> 2. 이름과 생일만 사용</label><label><input type="radio" name="u3_mc1" value="3"> 3. 충분한 길이, 숫자, 특수문자 등을 포함</label><label><input type="radio" name="u3_mc1" value="4"> 4. 모든 사이트에서 같은 비밀번호 사용</label><label><input type="radio" name="u3_mc1" value="5"> 5. 친구에게 알려주기 쉬운 비밀번호</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">5지선다형 2. 정보보안 실천으로 가장 적절하지 않은 것은?</div>
+          <label><input type="radio" name="u3_mc2" value="1"> 1. 2단계 인증 사용</label><label><input type="radio" name="u3_mc2" value="2"> 2. 운영체제와 백신 업데이트</label><label><input type="radio" name="u3_mc2" value="3"> 3. 의심스러운 링크 주의</label><label><input type="radio" name="u3_mc2" value="4"> 4. 비밀번호를 공개 게시판에 올리기</label><label><input type="radio" name="u3_mc2" value="5"> 5. 클라우드 접근 권한 확인</label>
+        </div>
+  <h3>서술형 문항</h3>
+  <div class="question">
+    <div class="qtitle">예제 코드를 보고 빈칸 ①, 빈칸 ②를 채우고 출력 결과를 서술하시오.</div>
+    <pre><code>password = "Safe2025!"
+
+has_length = len(password) &gt;= 8
+has_digit = any(ch.isdigit() for ch in password)
+has_symbol = any(not ch.isalnum() for ch in password)
+
+if has_length and has_digit and has_symbol:
+    result = ____①____
+else:
+    result = "개선 필요"
+
+print("판정:", ____②____)</code></pre>
+    <p>빈칸 ①</p><input type="text" id="u3_b1">
+    <p>빈칸 ②</p><input type="text" id="u3_b2">
+    <p>출력 결과 서술</p><textarea id="u3_out"></textarea>
+  </div>
+  <details class="solution" open=""><summary>12정05-03 상세 해설 보기</summary><div id="u3_solution"><p><b>OX 1 정답: O</b> — 정보보안은 데이터 유출과 오남용을 막기 위한 활동이다.</p><p><b>OX 2 정답: X</b> — 짧고 단순한 비밀번호는 추측되기 쉽다.</p><p><b>OX 3 정답: O</b> — 비밀번호 외 추가 인증을 요구하여 보안을 강화한다.</p><p><b>OX 4 정답: O</b> — 피싱과 악성코드 감염을 예방할 수 있다.</p><p><b>OX 5 정답: X</b> — 디지털 윤리는 책임 있는 정보 이용과 타인 존중을 포함한다.</p><p><b>5지선다형 1 정답: 3</b> — 충분한 길이와 다양한 문자 조합은 비밀번호 보안을 높인다.</p><p><b>5지선다형 2 정답: 4</b> — 비밀번호를 공개하면 계정 탈취 위험이 커진다.</p><p><b>서술형 정답</b><br>빈칸 ①: <code>"강한 비밀번호"</code><br>빈칸 ②: <code>result</code></p><pre><code>판정: 강한 비밀번호</code></pre><p>Safe2025!는 8자 이상이고 숫자와 특수문자를 포함하므로 세 조건을 모두 만족하여 '강한 비밀번호'로 판정된다.</p></div></details>
+</section>
+
+</main>
+</div>
+
+<script>
+const UNITS = [{"id": "12정05-01", "code": "501", "title": "디지털 기술과 진로 설계", "std": "디지털 기술이 사회에 미치는 영향력을 분석하고 발전 방향을 예측하여 진로를 설계한다.", "desc": "디지털 사회가 진로에 미치는 다양한 영향력을 설명하고, 디지털 기술의 발전에 따른 사회 변화와 연계한 진로를 구체적으로 설계하여 미래 사회의 발전 방향에 대해 예측하고 통찰하려는 자세를 내면화할 수 있다.", "color": "#2563eb", "concepts": ["디지털 기술은 직업의 형태, 업무 방식, 필요한 역량을 변화시킨다.", "인공지능, 빅데이터, 클라우드, 사물인터넷 등은 미래 진로 설계와 밀접하게 연결된다.", "진로 설계에서는 관심 분야, 필요한 디지털 역량, 사회 변화 전망을 함께 고려해야 한다.", "디지털 기술 발전은 기존 직업을 변화시키고 새로운 직업을 만들어낸다."], "example": "# 디지털 기술과 관련된 진로 추천 예제\ncareer_data = {\n    \"AI\": \"인공지능 개발자\",\n    \"DATA\": \"데이터 분석가\",\n    \"SECURITY\": \"정보보안 전문가\",\n    \"DESIGN\": \"UX/UI 디자이너\"\n}\n\ninterest = \"DATA\"\n\nif interest in career_data:\n    career = career_data[interest]\nelse:\n    career = \"추가 탐색 필요\"\n\nprint(\"관심 분야:\", interest)\nprint(\"추천 진로:\", career)", "output": "관심 분야: DATA\n추천 진로: 데이터 분석가", "ox": [["디지털 기술은 직업 세계와 진로 설계에 영향을 줄 수 있다.", "O", "디지털 기술은 직무 내용, 업무 방식, 필요 역량을 변화시킨다."], ["디지털 사회에서는 새로운 직업이 생기고 기존 직업도 변화할 수 있다.", "O", "기술 발전은 직업 구조를 변화시킨다."], ["진로 설계에서는 사회 변화와 디지털 역량을 고려할 필요가 없다.", "X", "미래 진로 설계에서는 기술 변화와 필요한 역량을 함께 고려해야 한다."], ["데이터 분석가, 정보보안 전문가 등은 디지털 기술과 관련된 진로가 될 수 있다.", "O", "데이터와 보안은 디지털 사회의 핵심 분야이다."], ["디지털 기술의 발전 방향을 예측하는 태도는 미래 사회를 준비하는 데 도움이 된다.", "O", "기술 변화 예측은 진로 선택과 역량 준비에 도움이 된다."]], "mc": [["디지털 기술 발전과 관련된 진로로 가장 적절한 것은?", ["데이터 분석가", "연필 깎기 전담자", "전기 없는 계산원", "종이만 분류하는 직업", "컴퓨터 사용 금지 관리자"], 1, "데이터 분석가는 디지털 기술과 밀접한 진로이다."], ["디지털 사회에서 진로를 설계할 때 가장 적절한 태도는?", ["기술 변화는 무시한다.", "현재 유행만 보고 결정한다.", "관심 분야와 필요한 디지털 역량, 사회 변화를 함께 고려한다.", "직업 정보는 전혀 찾아보지 않는다.", "디지털 기술은 모든 직업과 무관하다고 본다."], 3, "진로 설계는 개인 관심, 역량, 사회 변화 분석을 함께 고려해야 한다."]], "essay_code": "career_data = {\n    \"AI\": \"인공지능 개발자\",\n    \"DATA\": \"데이터 분석가\",\n    \"SECURITY\": \"정보보안 전문가\"\n}\n\ninterest = \"SECURITY\"\n\ncareer = career_data[____①____]\n\nprint(\"관심 분야:\", interest)\nprint(\"추천 진로:\", ____②____)", "blank": ["interest", "career"], "essay_output": "관심 분야: SECURITY\n추천 진로: 정보보안 전문가", "essay_explain": "interest 값은 'SECURITY'이고 career_data['SECURITY']의 값은 '정보보안 전문가'이므로 추천 진로는 정보보안 전문가가 된다."}, {"id": "12정05-02", "code": "502", "title": "정보 보호와 정보 공유", "std": "보호해야 할 정보와 공유해야 할 정보를 구분하고, 올바른 정보 보호 방법을 실천한다.", "desc": "정보 보호와 정보 공유에 대해 명확히 설명하고, 개인정보 보호, 오ㆍ남용 방지 대책 등 다양한 실사례 탐색을 통한 정보 보호 방법을 실천하여 올바른 정보 보호 의식을 내면화할 수 있다.", "color": "#059669", "concepts": ["개인정보, 비밀번호, 주민등록번호, 위치 정보 등은 보호해야 할 정보이다.", "공익적 자료, 출처가 명확한 공개 자료, 저작권을 지킨 자료는 조건에 맞게 공유할 수 있다.", "정보 공유 시에는 개인정보 노출, 저작권 침해, 허위 정보 확산을 주의해야 한다.", "정보 보호 실천에는 비밀번호 관리, 접근 권한 설정, 익명화, 출처 표시가 포함된다."], "example": "# 공유 가능한 정보와 보호해야 할 정보 구분 예제\ninfo_list = [\n    {\"name\": \"학교 급식 메뉴\", \"type\": \"공유 가능\"},\n    {\"name\": \"학생 전화번호\", \"type\": \"보호 필요\"},\n    {\"name\": \"공개 기상 데이터\", \"type\": \"공유 가능\"},\n    {\"name\": \"계정 비밀번호\", \"type\": \"보호 필요\"}\n]\n\nprotected = []\nshared = []\n\nfor info in info_list:\n    if info[\"type\"] == \"보호 필요\":\n        protected.append(info[\"name\"])\n    else:\n        shared.append(info[\"name\"])\n\nprint(\"보호해야 할 정보:\", protected)\nprint(\"공유 가능한 정보:\", shared)", "output": "보호해야 할 정보: ['학생 전화번호', '계정 비밀번호']\n공유 가능한 정보: ['학교 급식 메뉴', '공개 기상 데이터']", "ox": [["개인 전화번호와 비밀번호는 보호해야 할 정보이다.", "O", "개인정보와 인증 정보는 외부에 노출되면 피해가 발생할 수 있다."], ["공유 가능한 정보라도 출처와 저작권을 확인해야 한다.", "O", "공유 시에는 출처, 저작권, 이용 조건을 확인해야 한다."], ["친구의 개인정보는 동의 없이 인터넷에 올려도 된다.", "X", "타인의 개인정보는 동의 없이 공유하면 안 된다."], ["개인정보 보호를 위해 필요한 경우 데이터를 익명화할 수 있다.", "O", "익명화는 개인을 식별할 수 없도록 정보를 처리하는 방법이다."], ["정보 보호는 정보 공유와 전혀 관련이 없다.", "X", "올바른 공유를 위해서는 보호해야 할 정보와 공유 가능한 정보를 구분해야 한다."]], "mc": [["다음 중 보호해야 할 정보로 가장 적절한 것은?", ["공개된 날씨 정보", "개인 계정 비밀번호", "학교 홈페이지 공지", "공개 교통 통계", "저작권이 허용된 이미지"], 2, "비밀번호는 개인 인증 정보이므로 반드시 보호해야 한다."], ["올바른 정보 공유 방법으로 가장 적절한 것은?", ["출처 없이 복사해 배포한다.", "친구의 전화번호를 동의 없이 올린다.", "저작권과 개인정보를 확인한 뒤 필요한 범위에서 공유한다.", "비밀번호를 단체 채팅방에 올린다.", "확인되지 않은 소문을 빠르게 퍼뜨린다."], 3, "정보 공유 전 개인정보와 저작권, 출처를 확인해야 한다."]], "essay_code": "info_list = [\n    {\"name\": \"학생 주소\", \"type\": \"보호 필요\"},\n    {\"name\": \"공개 날씨 데이터\", \"type\": \"공유 가능\"}\n]\n\nprotected = []\nshared = []\n\nfor info in info_list:\n    if info[\"type\"] == \"보호 필요\":\n        protected.append(____①____)\n    else:\n        shared.append(info[\"name\"])\n\nprint(\"보호:\", protected)\nprint(\"공유:\", ____②____)", "blank": ["info[\"name\"]", "shared"], "essay_output": "보호: ['학생 주소']\n공유: ['공개 날씨 데이터']", "essay_explain": "학생 주소는 개인정보이므로 protected에 들어가고, 공개 날씨 데이터는 공유 가능한 정보이므로 shared에 들어간다."}, {"id": "12정05-03", "code": "503", "title": "정보보안과 디지털 윤리", "std": "정보보안의 필요성을 이해하고, 보안 기술을 활용하여 디지털 윤리를 실천한다.", "desc": "정보보안의 개념과 필요성을 명확하게 설명하고 개인 암호 설정 및 변경, 기기 및 클라우드 접근 제어, 바이러스 백신 설정 등 상황에 따른 보안 기술을 적절히 활용하여 디지털 윤리를 실천하며 올바른 보안 의식을 내면화할 수 있다.", "color": "#dc2626", "concepts": ["정보보안은 정보의 기밀성, 무결성, 가용성을 지키는 활동이다.", "강한 비밀번호, 2단계 인증, 접근 권한 설정은 계정 보호에 도움이 된다.", "백신 설정, 업데이트, 의심스러운 링크 주의는 악성코드 피해를 줄이는 방법이다.", "디지털 윤리는 타인의 정보와 권리를 존중하고 책임 있게 디지털 기술을 사용하는 태도이다."], "example": "# 비밀번호 강도 검사 예제\npassword = \"Info2025!\"\n\nhas_length = len(password) >= 8\nhas_digit = any(ch.isdigit() for ch in password)\nhas_symbol = any(not ch.isalnum() for ch in password)\n\nif has_length and has_digit and has_symbol:\n    result = \"강한 비밀번호\"\nelse:\n    result = \"개선 필요\"\n\nprint(\"비밀번호 길이 조건:\", has_length)\nprint(\"숫자 포함:\", has_digit)\nprint(\"특수문자 포함:\", has_symbol)\nprint(\"판정:\", result)", "output": "비밀번호 길이 조건: True\n숫자 포함: True\n특수문자 포함: True\n판정: 강한 비밀번호", "ox": [["정보보안은 개인정보와 중요한 데이터를 보호하는 데 필요하다.", "O", "정보보안은 데이터 유출과 오남용을 막기 위한 활동이다."], ["비밀번호는 짧고 단순할수록 안전하다.", "X", "짧고 단순한 비밀번호는 추측되기 쉽다."], ["2단계 인증은 계정 보안을 강화하는 방법이 될 수 있다.", "O", "비밀번호 외 추가 인증을 요구하여 보안을 강화한다."], ["의심스러운 링크를 함부로 클릭하지 않는 것은 보안 실천이다.", "O", "피싱과 악성코드 감염을 예방할 수 있다."], ["디지털 윤리는 온라인에서 타인의 권리와 정보를 존중하는 태도와 관련이 없다.", "X", "디지털 윤리는 책임 있는 정보 이용과 타인 존중을 포함한다."]], "mc": [["강한 비밀번호의 조건으로 가장 적절한 것은?", ["1234처럼 짧고 쉬운 비밀번호", "이름과 생일만 사용", "충분한 길이, 숫자, 특수문자 등을 포함", "모든 사이트에서 같은 비밀번호 사용", "친구에게 알려주기 쉬운 비밀번호"], 3, "충분한 길이와 다양한 문자 조합은 비밀번호 보안을 높인다."], ["정보보안 실천으로 가장 적절하지 않은 것은?", ["2단계 인증 사용", "운영체제와 백신 업데이트", "의심스러운 링크 주의", "비밀번호를 공개 게시판에 올리기", "클라우드 접근 권한 확인"], 4, "비밀번호를 공개하면 계정 탈취 위험이 커진다."]], "essay_code": "password = \"Safe2025!\"\n\nhas_length = len(password) >= 8\nhas_digit = any(ch.isdigit() for ch in password)\nhas_symbol = any(not ch.isalnum() for ch in password)\n\nif has_length and has_digit and has_symbol:\n    result = ____①____\nelse:\n    result = \"개선 필요\"\n\nprint(\"판정:\", ____②____)", "blank": ["\"강한 비밀번호\"", "result"], "essay_output": "판정: 강한 비밀번호", "essay_explain": "Safe2025!는 8자 이상이고 숫자와 특수문자를 포함하므로 세 조건을 모두 만족하여 '강한 비밀번호'로 판정된다."}];
+
+function norm(s){
+  return (s||'').toLowerCase().replace(/[“”]/g,'"').replace(/[‘’]/g,"'").replace(/\s+/g,'').trim();
+}
+function radio(name){
+  const c=document.querySelector('input[name="'+name+'"]:checked');
+  return c?c.value:'';
+}
+function sameAnswer(user, correct){
+  const u=norm(user), c=norm(correct);
+  if(u===c) return true;
+  const variants={
+    'info["name"]':['info[\'name\']'],
+    '"강한 비밀번호"':['강한비밀번호',"'강한비밀번호'"],
+    'interest':['interest'],
+    'career':['career'],
+    'shared':['shared'],
+    'result':['result']
+  };
+  if(variants[correct]) return variants[correct].map(norm).includes(u);
+  return false;
+}
+function outputOK(user, expected){
+  const u=norm(user), e=norm(expected);
+  if(u.includes(e) || e.includes(u)) return true;
+  return expected.split(/\n|:/).map(x=>norm(x)).filter(Boolean).every(x=>u.includes(x));
+}
+function buildSolutions(){
+  UNITS.forEach((unit,idx)=>{
+    const uid='u'+(idx+1);
+    let s='';
+    unit.ox.forEach((q,i)=>s+=`<p><b>OX ${i+1} 정답: ${q[1]}</b> — ${q[2]}</p>`);
+    unit.mc.forEach((q,i)=>s+=`<p><b>5지선다형 ${i+1} 정답: ${q[2]}</b> — ${q[3]}</p>`);
+    s+=`<p><b>서술형 정답</b><br>빈칸 ①: <code>${unit.blank[0]}</code><br>빈칸 ②: <code>${unit.blank[1]}</code></p>`;
+    s+=`<pre><code>${unit.essay_output}</code></pre><p>${unit.essay_explain}</p>`;
+    document.getElementById(uid+'_solution').innerHTML=s;
+  });
+}
+buildSolutions();
+
+function gradeAll(){
+  const sid=document.getElementById('studentId').value.trim();
+  const sname=document.getElementById('studentName').value.trim();
+  if(!sid || !sname){ alert('학번과 이름을 입력하세요.'); return; }
+
+  let totalScore=0;
+  let report=[];
+  report.push('2025 교육과정 고등학교 정보 5단원 디지털 문화 통합 평가');
+  report.push('[12정05-01] ~ [12정05-03]');
+  report.push('학번: '+sid);
+  report.push('이름: '+sname);
+  report.push('======================================');
+
+  UNITS.forEach((unit,idx)=>{
+    const uid='u'+(idx+1);
+    let unitScore=0;
+    report.push('');
+    report.push(`[${unit.id}] ${unit.title}`);
+    report.push('--------------------------------------');
+
+    unit.ox.forEach((q,i)=>{
+      const user=radio(`${uid}_ox${i+1}`);
+      const ok=user===q[1];
+      if(ok) unitScore+=10;
+      report.push(`OX ${i+1}: ${ok?'정답':'오답'} / 입력: ${user||'미응답'} / 정답: ${q[1]} / 해설: ${q[2]}`);
+    });
+
+    unit.mc.forEach((q,i)=>{
+      const user=radio(`${uid}_mc${i+1}`);
+      const ok=user===String(q[2]);
+      if(ok) unitScore+=15;
+      report.push(`5지선다형 ${i+1}: ${ok?'정답':'오답'} / 입력: ${user||'미응답'} / 정답: ${q[2]} / 해설: ${q[3]}`);
+    });
+
+    const b1=document.getElementById(uid+'_b1').value;
+    const b2=document.getElementById(uid+'_b2').value;
+    const out=document.getElementById(uid+'_out').value;
+    const b1ok=sameAnswer(b1, unit.blank[0]);
+    const b2ok=sameAnswer(b2, unit.blank[1]);
+    const outok=outputOK(out, unit.essay_output);
+    if(b1ok) unitScore+=5;
+    if(b2ok) unitScore+=5;
+    if(outok) unitScore+=10;
+
+    report.push(`서술형 빈칸 ①: ${b1ok?'정답':'오답'} / 입력: ${b1||'미응답'} / 정답: ${unit.blank[0]}`);
+    report.push(`서술형 빈칸 ②: ${b2ok?'정답':'오답'} / 입력: ${b2||'미응답'} / 정답: ${unit.blank[1]}`);
+    report.push(`서술형 출력 결과: ${outok?'정답':'오답'} / 정답: ${unit.essay_output.replace(/\n/g,' / ')}`);
+    report.push(`서술형 해설: ${unit.essay_explain}`);
+    report.push(`성취기준별 점수: ${unitScore} / 100`);
+    totalScore+=unitScore;
+  });
+
+  const now=new Date();
+  const timestamp=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0')+'_'+String(now.getHours()).padStart(2,'0')+'-'+String(now.getMinutes()).padStart(2,'0')+'-'+String(now.getSeconds()).padStart(2,'0');
+
+  report.push('');
+  report.push('======================================');
+  report.push('총점: '+totalScore+' / 300');
+  report.push('응시시각: '+timestamp);
+  report.push('======================================');
+
+  const text=report.join('\n');
+  const div=document.getElementById('result');
+  div.style.display='block';
+  div.textContent=text;
+
+  const blob=new Blob([text],{type:'text/plain;charset=utf-8'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=sid+'_'+sname+'_5단원_'+totalScore+'점_'+timestamp+'.txt';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function showAllSolutions(){document.querySelectorAll('details.solution').forEach(d=>d.open=true);}
+function hideAllSolutions(){document.querySelectorAll('details.solution').forEach(d=>d.open=false);}
+</script>
+
+</body></html>
