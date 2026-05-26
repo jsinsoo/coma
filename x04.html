@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<!-- saved from url=(0152)x04.html#u1 -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2025 교육과정 고등학교 정보 4단원 인공지능 통합 평가</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif;background:#f4f7fb;color:#1f2937;line-height:1.7}
+header{background:linear-gradient(135deg,#111827,#7c3aed);color:white;padding:30px 36px}
+header h1{margin:0;font-size:30px} header p{margin:8px 0 0;opacity:.95}
+.layout{display:grid;grid-template-columns:285px 1fr;min-height:100vh}
+nav{background:#111827;color:white;padding:18px;position:sticky;top:0;height:100vh;overflow:auto}
+nav h2{font-size:18px;margin:0 0 12px}
+nav a{display:block;color:#ede9fe;text-decoration:none;padding:10px 12px;border-radius:12px;margin:7px 0;background:rgba(255,255,255,.07);font-weight:700;font-size:14px}
+nav a:hover{background:rgba(255,255,255,.16)}
+main{padding:26px 34px 80px;max-width:1250px}
+section{background:white;border-radius:18px;padding:26px;margin-bottom:24px;box-shadow:0 8px 24px rgba(15,23,42,.08);border:1px solid #e5e7eb}
+.unit h2{color:var(--unit);border-left:8px solid var(--unit);padding-left:12px;margin-top:0}
+h2{color:#4c1d95;margin-top:0} h3{color:#334155;margin-top:24px}
+.standard{background:#f8fafc;border:1px solid #cbd5e1;border-radius:14px;padding:16px}
+pre{background:#0f172a;color:#e5e7eb;padding:18px;border-radius:14px;overflow:auto;font-size:14px;line-height:1.55}
+code{font-family:Consolas,'Courier New',monospace}
+.explain{background:#f8fafc;border-left:6px solid var(--unit,#7c3aed);padding:14px;border-radius:10px}
+.question{border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin:14px 0;background:#fcfcfd}
+.qtitle{font-weight:800;margin-bottom:10px;color:#111827}
+label{display:block;padding:9px 12px;border:1px solid #d1d5db;border-radius:10px;margin:7px 0;cursor:pointer;background:#fff}
+label:hover{background:#f5f3ff}
+input[type=text],textarea{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:10px;font-family:inherit;font-size:15px}
+textarea{min-height:100px}
+button{border:none;background:#7c3aed;color:white;padding:13px 20px;border-radius:12px;cursor:pointer;font-weight:800;font-size:15px;margin:6px 6px 6px 0}
+button:hover{background:#6d28d9} .gray{background:#475569} .gray:hover{background:#334155}
+.result{white-space:pre-wrap;background:#ecfeff;border:1px solid #67e8f9;border-radius:14px;padding:18px;margin-top:16px;display:none}
+.scorebox{background:#f1f5f9;border:1px solid #cbd5e1;border-radius:14px;padding:18px}
+.solution{background:#fffbeb;border:1px solid #fde68a;border-radius:14px;padding:12px;margin-top:14px}
+summary{font-weight:900;cursor:pointer;color:#92400e}
+#topSummary{background:#f5f3ff;border-left:6px solid #7c3aed;padding:16px;border-radius:12px}
+@media(max-width:850px){.layout{grid-template-columns:1fr}nav{position:relative;height:auto}main{padding:16px}}
+</style>
+</head>
+<body>
+<header>
+<h1>2025 교육과정 고등학교 정보 4단원 인공지능 통합 평가</h1>
+<p>[12정04-01] 지능 에이전트 · [12정04-02] 기계학습 · [12정04-03] 기계학습 활용</p>
+</header>
+<div class="layout">
+<nav>
+<h2>4단원 목차</h2>
+<a href="x04.html#intro">응시 정보 / 채점</a>
+<a href="x04.html#u1">12정04-01<br>지능 에이전트와 인간-인공지능 관계</a><a href="x04.html#u2">12정04-02<br>기계학습 개념과 지도학습·비지도학습 비교</a><a href="x04.html#u3">12정04-03<br>기계학습 활용과 사회문제 해결</a>
+</nav>
+<main>
+<section id="intro">
+<h2>응시 정보 및 통합 채점</h2>
+<div id="topSummary">
+4단원 인공지능 성취기준 [12정04-01]~[12정04-03]을 모두 포함한 통합 평가입니다.
+각 성취기준마다 OX 5문항, 5지선다형 2문항, 서술형 1문항을 포함합니다.
+각 성취기준은 100점, 전체는 300점 만점입니다.
+</div>
+<div class="scorebox">
+<p><b>학번</b></p><input type="text" id="studentId" placeholder="예: 1100">
+<p><b>이름</b></p><input type="text" id="studentName" placeholder="예: 인수샘">
+<br><br>
+<button onclick="gradeAll()">전체 채점 및 TXT 저장</button>
+<button class="gray" onclick="showAllSolutions()">전체 상세 해설 펼치기</button>
+<button class="gray" onclick="hideAllSolutions()">전체 상세 해설 접기</button>
+</div>
+<div id="result" class="result"></div>
+</section>
+
+    <section id="u1" class="unit" style="--unit:#0f766e">
+      <h2>12정04-01 지능 에이전트와 인간-인공지능 관계</h2>
+      <div class="standard"><b>성취기준</b><br>지능 에이전트의 개념과 특성을 이해하고, 인간과 인공지능의 관계를 분석한다.<br><br>지능 에이전트의 개념과 특성을 명확하게 설명하고, 다양한 인공지능 제품이나 서비스에서 지능 에이전트의 역할을 탐색하여 인간과 인공지능의 관계에 대해 올바르게 인식할 수 있다.</div>
+      <h3>핵심 개념</h3>
+      <ul><li>지능 에이전트는 환경을 인식하고 판단하며 행동하는 시스템이다.</li><li>센서는 환경 정보를 수집하고, 판단 과정은 상태에 따라 행동을 결정한다.</li><li>AI 비서, 스마트홈, 자율주행 자동차는 지능 에이전트의 예가 될 수 있다.</li><li>인공지능은 인간을 무조건 대체하는 존재가 아니라 협력적 문제 해결 도구가 될 수 있다.</li></ul>
+      <h3>예제 파이썬 코드</h3>
+      <pre><code>class SmartAgent:
+    def __init__(self, name):
+        self.name = name
+
+    def sense(self, temperature):
+        if temperature &gt; 28:
+            return "덥다"
+        else:
+            return "쾌적하다"
+
+    def act(self, state):
+        if state == "덥다":
+            return "에어컨 켜기"
+        else:
+            return "대기"
+
+agent = SmartAgent("AI 비서")
+
+state = agent.sense(30)
+action = agent.act(state)
+
+print("상태:", state)
+print("행동:", action)</code></pre>
+      <h3>예상 출력</h3>
+      <pre><code>상태: 덥다
+행동: 에어컨 켜기</code></pre>
+      <h3>상세 설명</h3>
+      <div class="explain">이 예제는 <b>지능 에이전트와 인간-인공지능 관계</b>의 핵심 개념을 코드로 표현한 것입니다. 입력 데이터, 모델 또는 판단 과정, 출력 결과를 연결하여 인공지능 문제 해결 흐름을 이해할 수 있습니다.</div>
+      <h3>OX 퀴즈 5문항</h3>
+      
+        <div class="question">
+          <div class="qtitle">OX 1. 지능 에이전트는 환경을 인식하고 행동할 수 있다.</div>
+          <label><input type="radio" name="u1_ox1" value="O"> O</label>
+          <label><input type="radio" name="u1_ox1" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 2. 지능 에이전트는 입력 없이 항상 같은 행동만 수행한다.</div>
+          <label><input type="radio" name="u1_ox2" value="O"> O</label>
+          <label><input type="radio" name="u1_ox2" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 3. 센서는 환경 정보를 수집하는 역할을 한다.</div>
+          <label><input type="radio" name="u1_ox3" value="O"> O</label>
+          <label><input type="radio" name="u1_ox3" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 4. 인공지능은 인간과 협력할 수 없다.</div>
+          <label><input type="radio" name="u1_ox4" value="O"> O</label>
+          <label><input type="radio" name="u1_ox4" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 5. AI 비서는 지능 에이전트의 예가 될 수 있다.</div>
+          <label><input type="radio" name="u1_ox5" value="O"> O</label>
+          <label><input type="radio" name="u1_ox5" value="X"> X</label>
+        </div>
+      <h3>5지선다형 2문항</h3>
+      
+        <div class="question">
+          <div class="qtitle">5지선다형 1. 지능 에이전트의 구성 요소로 가장 적절하지 않은 것은?</div>
+          <label><input type="radio" name="u1_mc1" value="1"> 1. 센서</label><label><input type="radio" name="u1_mc1" value="2"> 2. 판단 시스템</label><label><input type="radio" name="u1_mc1" value="3"> 3. 행동 장치</label><label><input type="radio" name="u1_mc1" value="4"> 4. 액추에이터</label><label><input type="radio" name="u1_mc1" value="5"> 5. 종이 색깔</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">5지선다형 2. 인간과 인공지능의 관계 설명으로 가장 적절한 것은?</div>
+          <label><input type="radio" name="u1_mc2" value="1"> 1. 항상 경쟁 관계이다.</label><label><input type="radio" name="u1_mc2" value="2"> 2. 인간을 완전히 제거한다.</label><label><input type="radio" name="u1_mc2" value="3"> 3. 협력적으로 문제를 해결할 수 있다.</label><label><input type="radio" name="u1_mc2" value="4"> 4. 인간은 필요 없다.</label><label><input type="radio" name="u1_mc2" value="5"> 5. 인공지능은 감정을 완벽히 가진다.</label>
+        </div>
+      <h3>서술형 문항</h3>
+      <div class="question">
+        <div class="qtitle">예제 코드를 보고 빈칸 ①, 빈칸 ②를 채우고 출력 결과를 서술하시오.</div>
+        <pre><code>agent = SmartAgent("AI 비서")
+
+state = agent.sense(25)
+
+action = ____①____
+
+print("상태:", state)
+print("행동:", ____②____)</code></pre>
+        <p>빈칸 ①</p><input type="text" id="u1_b1">
+        <p>빈칸 ②</p><input type="text" id="u1_b2">
+        <p>출력 결과 서술</p><textarea id="u1_out"></textarea>
+      </div>
+      <details class="solution"><summary>12정04-01 상세 해설 보기</summary><div id="u1_solution"><p><b>OX 1 정답: O</b> — 지능 에이전트는 환경을 감지하고 판단하여 행동한다.</p><p><b>OX 2 정답: X</b> — 지능 에이전트는 환경 입력에 따라 다른 행동을 할 수 있다.</p><p><b>OX 3 정답: O</b> — 센서는 지능 에이전트가 환경을 인식하도록 돕는다.</p><p><b>OX 4 정답: X</b> — 인공지능은 인간의 판단과 활동을 보조하며 협력할 수 있다.</p><p><b>OX 5 정답: O</b> — AI 비서는 입력을 받아 판단하고 응답하므로 지능 에이전트의 예가 된다.</p><p><b>5지선다형 1 정답: 5</b> — 종이 색깔은 지능 에이전트의 핵심 구성 요소가 아니다.</p><p><b>5지선다형 2 정답: 3</b> — 인공지능은 인간과 협력하여 문제 해결을 지원할 수 있다.</p><p><b>서술형 정답</b><br>빈칸 ①: <code>agent.act(state)</code><br>빈칸 ②: <code>action</code></p><pre><code>상태: 쾌적하다
+행동: 대기</code></pre><p>25도는 28도 이하이므로 sense()는 '쾌적하다'를 반환하고, act('쾌적하다')는 '대기'를 반환한다.</p></div></details>
+    </section>
+    
+    <section id="u2" class="unit" style="--unit:#2563eb">
+      <h2>12정04-02 기계학습 개념과 지도학습·비지도학습 비교</h2>
+      <div class="standard"><b>성취기준</b><br>기계학습의 개념을 이해하고, 지도학습과 비지도학습의 차이를 비교ㆍ분석한다.<br><br>기계학습의 개념과 유형을 명확하게 설명하고, 지도학습과 비지도학습의 차이를 정확하게 비교ㆍ분석할 수 있다.</div>
+      <h3>핵심 개념</h3>
+      <ul><li>기계학습은 데이터를 기반으로 규칙이나 패턴을 학습하는 인공지능 기술이다.</li><li>지도학습은 입력 데이터와 정답(label)을 함께 사용한다.</li><li>비지도학습은 정답 없이 데이터의 패턴이나 군집을 찾는다.</li><li>KNN은 대표적인 지도학습 알고리즘 중 하나이다.</li></ul>
+      <h3>예제 파이썬 코드</h3>
+      <pre><code>from sklearn.neighbors import KNeighborsClassifier
+
+# 공부 시간과 시험 점수 데이터
+X = [[1], [2], [3], [4], [5]]
+y = ["낮음", "낮음", "보통", "높음", "높음"]
+
+# 지도학습 모델 생성
+model = KNeighborsClassifier(n_neighbors=1)
+
+# 학습
+model.fit(X, y)
+
+# 예측
+result = model.predict([[4]])
+
+print("예측 결과:", result[0])</code></pre>
+      <h3>예상 출력</h3>
+      <pre><code>예측 결과: 높음</code></pre>
+      <h3>상세 설명</h3>
+      <div class="explain">이 예제는 <b>기계학습 개념과 지도학습·비지도학습 비교</b>의 핵심 개념을 코드로 표현한 것입니다. 입력 데이터, 모델 또는 판단 과정, 출력 결과를 연결하여 인공지능 문제 해결 흐름을 이해할 수 있습니다.</div>
+      <h3>OX 퀴즈 5문항</h3>
+      
+        <div class="question">
+          <div class="qtitle">OX 1. 기계학습은 데이터를 이용하여 규칙을 학습할 수 있다.</div>
+          <label><input type="radio" name="u2_ox1" value="O"> O</label>
+          <label><input type="radio" name="u2_ox1" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 2. 지도학습은 정답(label)이 없는 데이터만 사용한다.</div>
+          <label><input type="radio" name="u2_ox2" value="O"> O</label>
+          <label><input type="radio" name="u2_ox2" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 3. 비지도학습은 데이터의 패턴이나 군집을 찾는 데 활용될 수 있다.</div>
+          <label><input type="radio" name="u2_ox3" value="O"> O</label>
+          <label><input type="radio" name="u2_ox3" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 4. KNN 알고리즘은 대표적인 지도학습 알고리즘이다.</div>
+          <label><input type="radio" name="u2_ox4" value="O"> O</label>
+          <label><input type="radio" name="u2_ox4" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 5. 기계학습은 인공지능과 관련이 없다.</div>
+          <label><input type="radio" name="u2_ox5" value="O"> O</label>
+          <label><input type="radio" name="u2_ox5" value="X"> X</label>
+        </div>
+      <h3>5지선다형 2문항</h3>
+      
+        <div class="question">
+          <div class="qtitle">5지선다형 1. 지도학습의 특징으로 가장 적절한 것은?</div>
+          <label><input type="radio" name="u2_mc1" value="1"> 1. 정답 데이터 없이 학습한다.</label><label><input type="radio" name="u2_mc1" value="2"> 2. 입력과 정답(label)을 함께 사용한다.</label><label><input type="radio" name="u2_mc1" value="3"> 3. 항상 사람이 직접 계산한다.</label><label><input type="radio" name="u2_mc1" value="4"> 4. 데이터가 필요 없다.</label><label><input type="radio" name="u2_mc1" value="5"> 5. 결과를 예측할 수 없다.</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">5지선다형 2. 비지도학습의 활용 사례로 가장 적절한 것은?</div>
+          <label><input type="radio" name="u2_mc2" value="1"> 1. 시험 점수 예측</label><label><input type="radio" name="u2_mc2" value="2"> 2. 고양이와 강아지 분류</label><label><input type="radio" name="u2_mc2" value="3"> 3. 이메일 스팸 여부 분류</label><label><input type="radio" name="u2_mc2" value="4"> 4. 고객 데이터를 비슷한 그룹으로 군집화</label><label><input type="radio" name="u2_mc2" value="5"> 5. 정답(label)을 이용한 성적 예측</label>
+        </div>
+      <h3>서술형 문항</h3>
+      <div class="question">
+        <div class="qtitle">예제 코드를 보고 빈칸 ①, 빈칸 ②를 채우고 출력 결과를 서술하시오.</div>
+        <pre><code>from sklearn.neighbors import KNeighborsClassifier
+
+X = [[1], [2], [3]]
+y = ["낮음", "보통", "높음"]
+
+model = KNeighborsClassifier(n_neighbors=1)
+
+____①____
+
+result = model.predict([[3]])
+
+print("예측 결과:", ____②____)</code></pre>
+        <p>빈칸 ①</p><input type="text" id="u2_b1">
+        <p>빈칸 ②</p><input type="text" id="u2_b2">
+        <p>출력 결과 서술</p><textarea id="u2_out"></textarea>
+      </div>
+      <details class="solution"><summary>12정04-02 상세 해설 보기</summary><div id="u2_solution"><p><b>OX 1 정답: O</b> — 기계학습은 데이터에서 패턴을 찾고 이를 바탕으로 예측한다.</p><p><b>OX 2 정답: X</b> — 지도학습은 입력 데이터와 정답 데이터를 함께 사용한다.</p><p><b>OX 3 정답: O</b> — 비지도학습은 정답 없이 데이터 구조를 탐색한다.</p><p><b>OX 4 정답: O</b> — KNN은 가까운 이웃의 정답을 바탕으로 예측하는 지도학습 알고리즘이다.</p><p><b>OX 5 정답: X</b> — 기계학습은 인공지능의 핵심 분야 중 하나이다.</p><p><b>5지선다형 1 정답: 2</b> — 지도학습은 입력과 정답을 함께 학습한다.</p><p><b>5지선다형 2 정답: 4</b> — 비지도학습은 정답 없이 비슷한 데이터끼리 묶는 군집화에 활용될 수 있다.</p><p><b>서술형 정답</b><br>빈칸 ①: <code>model.fit(X, y)</code><br>빈칸 ②: <code>result[0]</code></p><pre><code>예측 결과: 높음</code></pre><p>model.fit(X, y)로 입력과 정답을 학습하고, 입력값 3은 학습 데이터에서 '높음'에 해당하므로 예측 결과는 '높음'이다.</p></div></details>
+    </section>
+    
+    <section id="u3" class="unit" style="--unit:#7c3aed">
+      <h2>12정04-03 기계학습 활용과 사회문제 해결</h2>
+      <div class="standard"><b>성취기준</b><br>기계학습을 활용하여 해결할 수 있는 문제와 그렇지 않은 문제를 구분하고, 사회문제 해결에 기계학습을 적용한다.<br><br>기계학습을 활용하여 해결할 수 있는 문제와 그렇지 않은 문제를 명확히 구분하고, 실생활 및 사회문제에 적합한 기계학습 유형을 적용하여 사회문제를 해결하기 위해 기계학습을 적극적으로 활용하는 자세를 내면화할 수 있다.</div>
+      <h3>핵심 개념</h3>
+      <ul><li>기계학습은 대량의 데이터에서 패턴을 학습하여 예측이나 분류에 활용될 수 있다.</li><li>미세먼지 예측, 교통량 분석, 의료 진단 보조 등은 기계학습 활용 사례이다.</li><li>윤리적 판단, 인간의 감정 공감처럼 데이터만으로 완전히 해결하기 어려운 문제도 있다.</li><li>사회문제 해결에는 데이터 품질, 편향, 윤리, 인간의 최종 판단이 함께 고려되어야 한다.</li></ul>
+      <h3>예제 파이썬 코드</h3>
+      <pre><code>from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# 날짜별 미세먼지 데이터
+days = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)
+dust = np.array([30, 35, 40, 45, 50])
+
+# 선형 회귀 모델 생성
+model = LinearRegression()
+
+# 학습
+model.fit(days, dust)
+
+# 예측
+prediction = model.predict([[6]])
+
+print("6일차 예측 미세먼지:", int(prediction[0]))</code></pre>
+      <h3>예상 출력</h3>
+      <pre><code>6일차 예측 미세먼지: 55</code></pre>
+      <h3>상세 설명</h3>
+      <div class="explain">이 예제는 <b>기계학습 활용과 사회문제 해결</b>의 핵심 개념을 코드로 표현한 것입니다. 입력 데이터, 모델 또는 판단 과정, 출력 결과를 연결하여 인공지능 문제 해결 흐름을 이해할 수 있습니다.</div>
+      <h3>OX 퀴즈 5문항</h3>
+      
+        <div class="question">
+          <div class="qtitle">OX 1. 기계학습은 데이터의 패턴을 학습하여 미래를 예측할 수 있다.</div>
+          <label><input type="radio" name="u3_ox1" value="O"> O</label>
+          <label><input type="radio" name="u3_ox1" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 2. 기계학습은 모든 사회문제를 완벽하게 해결할 수 있다.</div>
+          <label><input type="radio" name="u3_ox2" value="O"> O</label>
+          <label><input type="radio" name="u3_ox2" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 3. 미세먼지 예측은 기계학습 활용 사례가 될 수 있다.</div>
+          <label><input type="radio" name="u3_ox3" value="O"> O</label>
+          <label><input type="radio" name="u3_ox3" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 4. 기계학습은 데이터가 많을수록 더 유용하게 활용될 수 있다.</div>
+          <label><input type="radio" name="u3_ox4" value="O"> O</label>
+          <label><input type="radio" name="u3_ox4" value="X"> X</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">OX 5. 인간의 감정 공감 문제는 기계학습만으로 완전히 해결 가능하다.</div>
+          <label><input type="radio" name="u3_ox5" value="O"> O</label>
+          <label><input type="radio" name="u3_ox5" value="X"> X</label>
+        </div>
+      <h3>5지선다형 2문항</h3>
+      
+        <div class="question">
+          <div class="qtitle">5지선다형 1. 다음 중 기계학습 활용 사례로 가장 적절한 것은?</div>
+          <label><input type="radio" name="u3_mc1" value="1"> 1. 학생 감정 완전 이해</label><label><input type="radio" name="u3_mc1" value="2"> 2. 교통량 예측</label><label><input type="radio" name="u3_mc1" value="3"> 3. 인간 윤리 완전 판단</label><label><input type="radio" name="u3_mc1" value="4"> 4. 사람의 모든 감정 통제</label><label><input type="radio" name="u3_mc1" value="5"> 5. 인간의 창의성 완전 대체</label>
+        </div>
+        <div class="question">
+          <div class="qtitle">5지선다형 2. 기계학습으로 해결하기 어려운 문제는?</div>
+          <label><input type="radio" name="u3_mc2" value="1"> 1. 이미지 분류</label><label><input type="radio" name="u3_mc2" value="2"> 2. 음성 인식</label><label><input type="radio" name="u3_mc2" value="3"> 3. 미세먼지 예측</label><label><input type="radio" name="u3_mc2" value="4"> 4. 교통량 분석</label><label><input type="radio" name="u3_mc2" value="5"> 5. 인간의 도덕적 가치 완전 판단</label>
+        </div>
+      <h3>서술형 문항</h3>
+      <div class="question">
+        <div class="qtitle">예제 코드를 보고 빈칸 ①, 빈칸 ②를 채우고 출력 결과를 서술하시오.</div>
+        <pre><code>from sklearn.linear_model import LinearRegression
+
+model = LinearRegression()
+
+X = [[1], [2], [3]]
+y = [10, 20, 30]
+
+____①____
+
+result = model.predict([[4]])
+
+print("예측 결과:", ____②____)</code></pre>
+        <p>빈칸 ①</p><input type="text" id="u3_b1">
+        <p>빈칸 ②</p><input type="text" id="u3_b2">
+        <p>출력 결과 서술</p><textarea id="u3_out"></textarea>
+      </div>
+      <details class="solution"><summary>12정04-03 상세 해설 보기</summary><div id="u3_solution"><p><b>OX 1 정답: O</b> — 기계학습은 과거 데이터의 패턴을 바탕으로 예측에 활용될 수 있다.</p><p><b>OX 2 정답: X</b> — 사회문제에는 윤리, 가치 판단, 맥락 이해 등 데이터만으로 해결하기 어려운 요소가 있다.</p><p><b>OX 3 정답: O</b> — 기상·환경 데이터를 활용하여 미세먼지 농도를 예측할 수 있다.</p><p><b>OX 4 정답: O</b> — 일반적으로 충분한 양질의 데이터는 모델 학습에 도움이 된다.</p><p><b>OX 5 정답: X</b> — 감정 공감은 인간적 맥락과 윤리적 이해가 필요하므로 기계학습만으로 완전히 해결하기 어렵다.</p><p><b>5지선다형 1 정답: 2</b> — 교통량 예측은 데이터 패턴을 활용하는 기계학습 사례가 될 수 있다.</p><p><b>5지선다형 2 정답: 5</b> — 도덕적 가치 판단은 데이터 분석만으로 완전히 해결하기 어렵다.</p><p><b>서술형 정답</b><br>빈칸 ①: <code>model.fit(X, y)</code><br>빈칸 ②: <code>int(result[0])</code></p><pre><code>예측 결과: 40</code></pre><p>X와 y는 1이 증가할 때 y가 10씩 증가하는 관계이므로 4를 입력하면 예측 결과는 약 40이다.</p></div></details>
+    </section>
+    
+</main>
+</div>
+
+<script>
+const UNITS = [{"id": "12정04-01", "code": "401", "title": "지능 에이전트와 인간-인공지능 관계", "std": "지능 에이전트의 개념과 특성을 이해하고, 인간과 인공지능의 관계를 분석한다.", "desc": "지능 에이전트의 개념과 특성을 명확하게 설명하고, 다양한 인공지능 제품이나 서비스에서 지능 에이전트의 역할을 탐색하여 인간과 인공지능의 관계에 대해 올바르게 인식할 수 있다.", "color": "#0f766e", "concepts": ["지능 에이전트는 환경을 인식하고 판단하며 행동하는 시스템이다.", "센서는 환경 정보를 수집하고, 판단 과정은 상태에 따라 행동을 결정한다.", "AI 비서, 스마트홈, 자율주행 자동차는 지능 에이전트의 예가 될 수 있다.", "인공지능은 인간을 무조건 대체하는 존재가 아니라 협력적 문제 해결 도구가 될 수 있다."], "example": "class SmartAgent:\n    def __init__(self, name):\n        self.name = name\n\n    def sense(self, temperature):\n        if temperature > 28:\n            return \"덥다\"\n        else:\n            return \"쾌적하다\"\n\n    def act(self, state):\n        if state == \"덥다\":\n            return \"에어컨 켜기\"\n        else:\n            return \"대기\"\n\nagent = SmartAgent(\"AI 비서\")\n\nstate = agent.sense(30)\naction = agent.act(state)\n\nprint(\"상태:\", state)\nprint(\"행동:\", action)", "output": "상태: 덥다\n행동: 에어컨 켜기", "ox": [["지능 에이전트는 환경을 인식하고 행동할 수 있다.", "O", "지능 에이전트는 환경을 감지하고 판단하여 행동한다."], ["지능 에이전트는 입력 없이 항상 같은 행동만 수행한다.", "X", "지능 에이전트는 환경 입력에 따라 다른 행동을 할 수 있다."], ["센서는 환경 정보를 수집하는 역할을 한다.", "O", "센서는 지능 에이전트가 환경을 인식하도록 돕는다."], ["인공지능은 인간과 협력할 수 없다.", "X", "인공지능은 인간의 판단과 활동을 보조하며 협력할 수 있다."], ["AI 비서는 지능 에이전트의 예가 될 수 있다.", "O", "AI 비서는 입력을 받아 판단하고 응답하므로 지능 에이전트의 예가 된다."]], "mc": [["지능 에이전트의 구성 요소로 가장 적절하지 않은 것은?", ["센서", "판단 시스템", "행동 장치", "액추에이터", "종이 색깔"], 5, "종이 색깔은 지능 에이전트의 핵심 구성 요소가 아니다."], ["인간과 인공지능의 관계 설명으로 가장 적절한 것은?", ["항상 경쟁 관계이다.", "인간을 완전히 제거한다.", "협력적으로 문제를 해결할 수 있다.", "인간은 필요 없다.", "인공지능은 감정을 완벽히 가진다."], 3, "인공지능은 인간과 협력하여 문제 해결을 지원할 수 있다."]], "essay_code": "agent = SmartAgent(\"AI 비서\")\n\nstate = agent.sense(25)\n\naction = ____①____\n\nprint(\"상태:\", state)\nprint(\"행동:\", ____②____)", "blank": ["agent.act(state)", "action"], "essay_output": "상태: 쾌적하다\n행동: 대기", "essay_explain": "25도는 28도 이하이므로 sense()는 '쾌적하다'를 반환하고, act('쾌적하다')는 '대기'를 반환한다."}, {"id": "12정04-02", "code": "402", "title": "기계학습 개념과 지도학습·비지도학습 비교", "std": "기계학습의 개념을 이해하고, 지도학습과 비지도학습의 차이를 비교ㆍ분석한다.", "desc": "기계학습의 개념과 유형을 명확하게 설명하고, 지도학습과 비지도학습의 차이를 정확하게 비교ㆍ분석할 수 있다.", "color": "#2563eb", "concepts": ["기계학습은 데이터를 기반으로 규칙이나 패턴을 학습하는 인공지능 기술이다.", "지도학습은 입력 데이터와 정답(label)을 함께 사용한다.", "비지도학습은 정답 없이 데이터의 패턴이나 군집을 찾는다.", "KNN은 대표적인 지도학습 알고리즘 중 하나이다."], "example": "from sklearn.neighbors import KNeighborsClassifier\n\n# 공부 시간과 시험 점수 데이터\nX = [[1], [2], [3], [4], [5]]\ny = [\"낮음\", \"낮음\", \"보통\", \"높음\", \"높음\"]\n\n# 지도학습 모델 생성\nmodel = KNeighborsClassifier(n_neighbors=1)\n\n# 학습\nmodel.fit(X, y)\n\n# 예측\nresult = model.predict([[4]])\n\nprint(\"예측 결과:\", result[0])", "output": "예측 결과: 높음", "ox": [["기계학습은 데이터를 이용하여 규칙을 학습할 수 있다.", "O", "기계학습은 데이터에서 패턴을 찾고 이를 바탕으로 예측한다."], ["지도학습은 정답(label)이 없는 데이터만 사용한다.", "X", "지도학습은 입력 데이터와 정답 데이터를 함께 사용한다."], ["비지도학습은 데이터의 패턴이나 군집을 찾는 데 활용될 수 있다.", "O", "비지도학습은 정답 없이 데이터 구조를 탐색한다."], ["KNN 알고리즘은 대표적인 지도학습 알고리즘이다.", "O", "KNN은 가까운 이웃의 정답을 바탕으로 예측하는 지도학습 알고리즘이다."], ["기계학습은 인공지능과 관련이 없다.", "X", "기계학습은 인공지능의 핵심 분야 중 하나이다."]], "mc": [["지도학습의 특징으로 가장 적절한 것은?", ["정답 데이터 없이 학습한다.", "입력과 정답(label)을 함께 사용한다.", "항상 사람이 직접 계산한다.", "데이터가 필요 없다.", "결과를 예측할 수 없다."], 2, "지도학습은 입력과 정답을 함께 학습한다."], ["비지도학습의 활용 사례로 가장 적절한 것은?", ["시험 점수 예측", "고양이와 강아지 분류", "이메일 스팸 여부 분류", "고객 데이터를 비슷한 그룹으로 군집화", "정답(label)을 이용한 성적 예측"], 4, "비지도학습은 정답 없이 비슷한 데이터끼리 묶는 군집화에 활용될 수 있다."]], "essay_code": "from sklearn.neighbors import KNeighborsClassifier\n\nX = [[1], [2], [3]]\ny = [\"낮음\", \"보통\", \"높음\"]\n\nmodel = KNeighborsClassifier(n_neighbors=1)\n\n____①____\n\nresult = model.predict([[3]])\n\nprint(\"예측 결과:\", ____②____)", "blank": ["model.fit(X, y)", "result[0]"], "essay_output": "예측 결과: 높음", "essay_explain": "model.fit(X, y)로 입력과 정답을 학습하고, 입력값 3은 학습 데이터에서 '높음'에 해당하므로 예측 결과는 '높음'이다."}, {"id": "12정04-03", "code": "403", "title": "기계학습 활용과 사회문제 해결", "std": "기계학습을 활용하여 해결할 수 있는 문제와 그렇지 않은 문제를 구분하고, 사회문제 해결에 기계학습을 적용한다.", "desc": "기계학습을 활용하여 해결할 수 있는 문제와 그렇지 않은 문제를 명확히 구분하고, 실생활 및 사회문제에 적합한 기계학습 유형을 적용하여 사회문제를 해결하기 위해 기계학습을 적극적으로 활용하는 자세를 내면화할 수 있다.", "color": "#7c3aed", "concepts": ["기계학습은 대량의 데이터에서 패턴을 학습하여 예측이나 분류에 활용될 수 있다.", "미세먼지 예측, 교통량 분석, 의료 진단 보조 등은 기계학습 활용 사례이다.", "윤리적 판단, 인간의 감정 공감처럼 데이터만으로 완전히 해결하기 어려운 문제도 있다.", "사회문제 해결에는 데이터 품질, 편향, 윤리, 인간의 최종 판단이 함께 고려되어야 한다."], "example": "from sklearn.linear_model import LinearRegression\nimport numpy as np\n\n# 날짜별 미세먼지 데이터\ndays = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)\ndust = np.array([30, 35, 40, 45, 50])\n\n# 선형 회귀 모델 생성\nmodel = LinearRegression()\n\n# 학습\nmodel.fit(days, dust)\n\n# 예측\nprediction = model.predict([[6]])\n\nprint(\"6일차 예측 미세먼지:\", int(prediction[0]))", "output": "6일차 예측 미세먼지: 55", "ox": [["기계학습은 데이터의 패턴을 학습하여 미래를 예측할 수 있다.", "O", "기계학습은 과거 데이터의 패턴을 바탕으로 예측에 활용될 수 있다."], ["기계학습은 모든 사회문제를 완벽하게 해결할 수 있다.", "X", "사회문제에는 윤리, 가치 판단, 맥락 이해 등 데이터만으로 해결하기 어려운 요소가 있다."], ["미세먼지 예측은 기계학습 활용 사례가 될 수 있다.", "O", "기상·환경 데이터를 활용하여 미세먼지 농도를 예측할 수 있다."], ["기계학습은 데이터가 많을수록 더 유용하게 활용될 수 있다.", "O", "일반적으로 충분한 양질의 데이터는 모델 학습에 도움이 된다."], ["인간의 감정 공감 문제는 기계학습만으로 완전히 해결 가능하다.", "X", "감정 공감은 인간적 맥락과 윤리적 이해가 필요하므로 기계학습만으로 완전히 해결하기 어렵다."]], "mc": [["다음 중 기계학습 활용 사례로 가장 적절한 것은?", ["학생 감정 완전 이해", "교통량 예측", "인간 윤리 완전 판단", "사람의 모든 감정 통제", "인간의 창의성 완전 대체"], 2, "교통량 예측은 데이터 패턴을 활용하는 기계학습 사례가 될 수 있다."], ["기계학습으로 해결하기 어려운 문제는?", ["이미지 분류", "음성 인식", "미세먼지 예측", "교통량 분석", "인간의 도덕적 가치 완전 판단"], 5, "도덕적 가치 판단은 데이터 분석만으로 완전히 해결하기 어렵다."]], "essay_code": "from sklearn.linear_model import LinearRegression\n\nmodel = LinearRegression()\n\nX = [[1], [2], [3]]\ny = [10, 20, 30]\n\n____①____\n\nresult = model.predict([[4]])\n\nprint(\"예측 결과:\", ____②____)", "blank": ["model.fit(X, y)", "int(result[0])"], "essay_output": "예측 결과: 40", "essay_explain": "X와 y는 1이 증가할 때 y가 10씩 증가하는 관계이므로 4를 입력하면 예측 결과는 약 40이다."}];
+
+function norm(s){
+  return (s||'').toLowerCase().replace(/[“”]/g,'"').replace(/[‘’]/g,"'").replace(/\s+/g,'').trim();
+}
+function radio(name){
+  const c=document.querySelector('input[name="'+name+'"]:checked');
+  return c?c.value:'';
+}
+function sameAnswer(user, correct){
+  const u=norm(user), c=norm(correct);
+  if(u===c) return true;
+  const variants={
+    'model.fit(X, y)':['model.fit(X,y)'],
+    'agent.act(state)':['agent.act(state)'],
+    'int(result[0])':['int(result[0])'],
+    'result[0]':['result[0]']
+  };
+  if(variants[correct]) return variants[correct].map(norm).includes(u);
+  return false;
+}
+function outputOK(user, expected){
+  const u=norm(user), e=norm(expected);
+  if(u.includes(e) || e.includes(u)) return true;
+  return expected.split(/\n|:/).map(x=>norm(x)).filter(Boolean).every(x=>u.includes(x));
+}
+function buildSolutions(){
+  UNITS.forEach((unit,idx)=>{
+    const uid='u'+(idx+1);
+    let s='';
+    unit.ox.forEach((q,i)=>s+=`<p><b>OX ${i+1} 정답: ${q[1]}</b> — ${q[2]}</p>`);
+    unit.mc.forEach((q,i)=>s+=`<p><b>5지선다형 ${i+1} 정답: ${q[2]}</b> — ${q[3]}</p>`);
+    s+=`<p><b>서술형 정답</b><br>빈칸 ①: <code>${unit.blank[0]}</code><br>빈칸 ②: <code>${unit.blank[1]}</code></p>`;
+    s+=`<pre><code>${unit.essay_output}</code></pre><p>${unit.essay_explain}</p>`;
+    document.getElementById(uid+'_solution').innerHTML=s;
+  });
+}
+buildSolutions();
+
+function gradeAll(){
+  const sid=document.getElementById('studentId').value.trim();
+  const sname=document.getElementById('studentName').value.trim();
+  if(!sid || !sname){ alert('학번과 이름을 입력하세요.'); return; }
+
+  let totalScore=0;
+  let report=[];
+  report.push('2025 교육과정 고등학교 정보 4단원 인공지능 통합 평가');
+  report.push('[12정04-01] ~ [12정04-03]');
+  report.push('학번: '+sid);
+  report.push('이름: '+sname);
+  report.push('======================================');
+
+  UNITS.forEach((unit,idx)=>{
+    const uid='u'+(idx+1);
+    let unitScore=0;
+    report.push('');
+    report.push(`[${unit.id}] ${unit.title}`);
+    report.push('--------------------------------------');
+
+    unit.ox.forEach((q,i)=>{
+      const user=radio(`${uid}_ox${i+1}`);
+      const ok=user===q[1];
+      if(ok) unitScore+=10;
+      report.push(`OX ${i+1}: ${ok?'정답':'오답'} / 입력: ${user||'미응답'} / 정답: ${q[1]} / 해설: ${q[2]}`);
+    });
+
+    unit.mc.forEach((q,i)=>{
+      const user=radio(`${uid}_mc${i+1}`);
+      const ok=user===String(q[2]);
+      if(ok) unitScore+=15;
+      report.push(`5지선다형 ${i+1}: ${ok?'정답':'오답'} / 입력: ${user||'미응답'} / 정답: ${q[2]} / 해설: ${q[3]}`);
+    });
+
+    const b1=document.getElementById(uid+'_b1').value;
+    const b2=document.getElementById(uid+'_b2').value;
+    const out=document.getElementById(uid+'_out').value;
+    const b1ok=sameAnswer(b1, unit.blank[0]);
+    const b2ok=sameAnswer(b2, unit.blank[1]);
+    const outok=outputOK(out, unit.essay_output);
+    if(b1ok) unitScore+=5;
+    if(b2ok) unitScore+=5;
+    if(outok) unitScore+=10;
+
+    report.push(`서술형 빈칸 ①: ${b1ok?'정답':'오답'} / 입력: ${b1||'미응답'} / 정답: ${unit.blank[0]}`);
+    report.push(`서술형 빈칸 ②: ${b2ok?'정답':'오답'} / 입력: ${b2||'미응답'} / 정답: ${unit.blank[1]}`);
+    report.push(`서술형 출력 결과: ${outok?'정답':'오답'} / 정답: ${unit.essay_output.replace(/\n/g,' / ')}`);
+    report.push(`서술형 해설: ${unit.essay_explain}`);
+    report.push(`성취기준별 점수: ${unitScore} / 100`);
+    totalScore+=unitScore;
+  });
+
+  const now=new Date();
+  const timestamp=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0')+'_'+String(now.getHours()).padStart(2,'0')+'-'+String(now.getMinutes()).padStart(2,'0')+'-'+String(now.getSeconds()).padStart(2,'0');
+
+  report.push('');
+  report.push('======================================');
+  report.push('총점: '+totalScore+' / 300');
+  report.push('응시시각: '+timestamp);
+  report.push('======================================');
+
+  const text=report.join('\n');
+  const div=document.getElementById('result');
+  div.style.display='block';
+  div.textContent=text;
+
+  const blob=new Blob([text],{type:'text/plain;charset=utf-8'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=sid+'_'+sname+'_4단원_'+totalScore+'점_'+timestamp+'.txt';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function showAllSolutions(){document.querySelectorAll('details.solution').forEach(d=>d.open=true);}
+function hideAllSolutions(){document.querySelectorAll('details.solution').forEach(d=>d.open=false);}
+</script>
+
+</body></html>
